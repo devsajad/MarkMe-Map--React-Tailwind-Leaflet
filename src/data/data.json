@@ -1,0 +1,28 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "Home",
+      "places": [
+        {
+          "id": 1,
+          "name": "Home",
+          "details": "this is my Home",
+          "coordinates": [51.505, -0.09]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Work",
+      "places": [
+        {
+          "id": 2,
+          "name": "Work",
+          "details": "this is my work",
+          "coordinates": [51.525, -0.11]
+        }
+      ]
+    }
+  ]
+}
