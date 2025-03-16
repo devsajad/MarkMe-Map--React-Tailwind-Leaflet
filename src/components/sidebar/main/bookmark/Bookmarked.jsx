@@ -1,5 +1,5 @@
 import { NavLink, useSearchParams } from "react-router-dom";
-import IconBookmark from "../../../icons/IconBookmark";
+import IconBookmark from "../../../../icons/IconBookmark";
 
 function Bookmarked() {
   const [searchParams] = useSearchParams();
@@ -7,7 +7,7 @@ function Bookmarked() {
 
   return (
     <NavLink
-      to={"/categories?sidebar=closed&state=categories"}
+      to={"/categories?sidebar=closed"}
       className="flex-container gap-2 cursor-pointer"
     >
       <IconBookmark />

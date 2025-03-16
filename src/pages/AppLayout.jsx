@@ -7,6 +7,7 @@ import SidebarMain from "../components/sidebar/main/SidebarMain";
 import SidebarRecents from "../components/sidebar/recents/SidebarRecents";
 import IconGps from "../icons/IconGps";
 import IconMap from "../icons/iconMap";
+import SecSidebar from "../components/sidebar/SecSidebar";
 
 function AppLayout() {
   return (
@@ -17,14 +18,9 @@ function AppLayout() {
         <SidebarRecents />
       </Sidebar>
 
-      <Outlet />
+      <SecSidebar />
 
       <Map />
-
-      <MapControls>
-        <IconMap />
-        <IconGps />
-      </MapControls>
     </main>
   );
 }

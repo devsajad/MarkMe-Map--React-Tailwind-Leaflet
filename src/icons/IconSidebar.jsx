@@ -1,13 +1,16 @@
-import { Link, useSearchParams } from "react-router-dom";
+import { Link, useNavigate, useSearchParams } from "react-router-dom";
 
 function IconSidebar() {
-  const [searchParams, setSearchParams] = useSearchParams();
+  const [searchParams] = useSearchParams();
+  const navigate = useNavigate();
   const sidebarState = searchParams.get("sidebar");
 
   function toggleSidebar() {
-    const newParams = new URLSearchParams(searchParams);
-    newParams.set("sidebar", sidebarState === "closed" ? "open" : "closed");
-    setSearchParams(newParams);
+    if (sidebarState === "open" || !sidebarState) {
+      navigate("/?sidebar=closed");
+    } else {
+      navigate("/?sidebar=open");
+    }
   }
 
   return (

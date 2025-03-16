@@ -4,12 +4,31 @@
 
 @theme {
   --font-sans: "Poppins", sans-serif;
-  --color-dark-primary: #111111;
-  --color-dark-primary-tint: #434343;
+  --color-dark-primary: var(--color-gray-900);
+  --color-dark-primary-tint: var(--color-gray-700);
   --color-active-tab: var(--color-blue-500);
 }
 
+@layer base {
+  body,
+  html {
+    @apply overflow-y-hidden;
+  }
+
+  input,
+  textarea,
+  button {
+    @variant disabled {
+      @apply opacity-30;
+    }
+  }
+}
+
 @layer components {
+  .border-style {
+    @apply border-white/10;
+  }
+
   .flex-container {
     @apply flex items-center;
   }

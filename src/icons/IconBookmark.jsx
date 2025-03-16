@@ -1,13 +1,13 @@
-import { NavLink, useSearchParams } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 
 function IconBookmark() {
-  const [searchParams] = useSearchParams();
-  const isStateCategories = searchParams.get("state") === "categories";
+  const location = useLocation();
+  const isCategoriesPage = location.pathname === "/categories";
 
   return (
     <button
       className={`icon-container cursor-pointer duration-300 ${
-        isStateCategories ? "bg-active-tab" : ""
+        isCategoriesPage ? "bg-active-tab" : ""
       }`}
     >
       <svg

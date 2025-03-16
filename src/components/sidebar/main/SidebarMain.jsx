@@ -1,5 +1,5 @@
 import Search from "./Search";
-import Bookmarked from "./Bookmarked";
+import Bookmarked from "./bookmark/Bookmarked";
 
 function SidebarMain() {
   return (

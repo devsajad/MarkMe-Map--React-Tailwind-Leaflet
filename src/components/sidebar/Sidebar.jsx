@@ -6,7 +6,7 @@ function Sidebar({ children }) {
 
   return (
     <aside
-      className={`h-dvh p-4 z-1000 absolute top-0 left-0 duration-300 backdrop-blur-lg bg-dark-primary/85 ${
+      className={`h-dvh p-4 z-1000 absolute top-0 left-0 duration-500 backdrop-blur-lg bg-dark-primary/85 ${
         sidebarState === "closed" ? "w-18" : "w-50"
       }`}
     >
